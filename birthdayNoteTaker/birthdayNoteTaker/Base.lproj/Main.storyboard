@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="birthdayNoteTaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fj9-Q0-tGH">
+                                <rect key="frame" x="65" y="96" width="261" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="q1o-E5-OJB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="birthday:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-sQ-sqe">
+                                <rect key="frame" x="65" y="170" width="261" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Ueo-XJ-xmb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7c-4O-mez">
+                                <rect key="frame" x="65" y="258" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pxO-aU-qee"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdy-UA-1Ns">
+                                <rect key="frame" x="89" y="392" width="213" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-jd-jbG">
+                                <rect key="frame" x="251" y="258" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="cPx-Qe-xCA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edd-hq-GUi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEU-oD-0tV">
+                                <rect key="frame" x="89" y="324" width="213" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fj9-Q0-tGH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="14A-aV-07z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mdy-UA-1Ns" secondAttribute="bottom" constant="358" id="1TH-js-oPG"/>
+                            <constraint firstItem="v7c-4O-mez" firstAttribute="top" secondItem="Jtk-sQ-sqe" secondAttribute="bottom" constant="54" id="A62-pm-aAv"/>
+                            <constraint firstItem="mdy-UA-1Ns" firstAttribute="top" secondItem="tEU-oD-0tV" secondAttribute="bottom" constant="8" id="B84-Tu-Za9"/>
+                            <constraint firstItem="tEU-oD-0tV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="G6j-jz-urr"/>
+                            <constraint firstItem="Jtk-sQ-sqe" firstAttribute="trailing" secondItem="4wf-jd-jbG" secondAttribute="trailing" id="KEY-jy-SOk"/>
+                            <constraint firstItem="mdy-UA-1Ns" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RM0-t5-mt7"/>
+                            <constraint firstItem="Jtk-sQ-sqe" firstAttribute="leading" secondItem="v7c-4O-mez" secondAttribute="leading" id="UGH-Yf-2Y2"/>
+                            <constraint firstItem="v7c-4O-mez" firstAttribute="baseline" secondItem="4wf-jd-jbG" secondAttribute="baseline" id="Xf7-ii-inO"/>
+                            <constraint firstItem="fj9-Q0-tGH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Y9a-fL-byn"/>
+                            <constraint firstItem="tEU-oD-0tV" firstAttribute="trailing" secondItem="mdy-UA-1Ns" secondAttribute="trailing" id="YyK-fb-Kau"/>
+                            <constraint firstItem="fj9-Q0-tGH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="aDI-go-geK"/>
+                            <constraint firstItem="Jtk-sQ-sqe" firstAttribute="centerX" secondItem="tEU-oD-0tV" secondAttribute="centerX" id="ezQ-e8-Ao3"/>
+                            <constraint firstItem="tEU-oD-0tV" firstAttribute="leading" secondItem="mdy-UA-1Ns" secondAttribute="leading" id="fHI-s5-M6C"/>
+                            <constraint firstItem="tEU-oD-0tV" firstAttribute="top" secondItem="v7c-4O-mez" secondAttribute="bottom" constant="31" id="izr-Ik-65O"/>
+                            <constraint firstItem="fj9-Q0-tGH" firstAttribute="trailing" secondItem="Jtk-sQ-sqe" secondAttribute="trailing" id="str-zi-wFh"/>
+                            <constraint firstItem="Jtk-sQ-sqe" firstAttribute="top" secondItem="fj9-Q0-tGH" secondAttribute="bottom" constant="40" id="tZU-YB-cPc"/>
+                            <constraint firstItem="4wf-jd-jbG" firstAttribute="baseline" secondItem="v7c-4O-mez" secondAttribute="firstBaseline" id="vHw-Rm-143"/>
+                            <constraint firstItem="fj9-Q0-tGH" firstAttribute="leading" secondItem="Jtk-sQ-sqe" secondAttribute="leading" id="yMg-DF-yuU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="mdy-UA-1Ns" id="gkM-Wk-3VU"/>
+                        <outlet property="birthdayTextField" destination="Jtk-sQ-sqe" id="jOx-x1-uL0"/>
+                        <outlet property="nameLabel" destination="tEU-oD-0tV" id="hV9-LC-NXn"/>
+                        <outlet property="nameTextField" destination="fj9-Q0-tGH" id="6Bi-ig-4WQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
